@@ -1,3 +1,3 @@
 # MangRamon
 
-To all colaboratos!, god loves you 
+To all colaborators!, god loves you 
