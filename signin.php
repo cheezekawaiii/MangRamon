@@ -11,7 +11,24 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+a:link {
+  color: green;
+}
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: yellow;
+} 
+</style>
 </head>
+   
 <body>
 
     <div class="main" style="background-color: #808080">
