@@ -1,3 +1,66 @@
+<?php
+include('conn.php');
+$err_msg ="";
+
+
+//Add Data
+if(isset($_POST['signup']))
+{
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $password = $_POST['pass'];
+  $confirmpass = $_POST['re_pass'];
+
+  if ($password == $confirmpass){ 
+
+    if ($name =='' && $email == '' && $password=='' && $confirmpass =='' ) 
+    {
+
+           echo '<script>alert("Incomplete Data")</script>';
+           // $err_msg = 'Incomplete Data';
+    }
+     
+    else 
+    {
+        $check = "SELECT * FROM signup Where username='$name' ";
+    if($rs=$conn->query($check)){
+      if($rs->num_rows>=1){
+        //header( 'Location: register.php');
+
+        echo '<script>alert("Username already exist")</script>';
+        //$err_msg = 'Username already exist';
+            
+                         }
+
+                            
+
+
+ else {
+ $sql="INSERT INTO signup SET
+ username = '$name',
+ email = '$email',
+ password = '".md5($password)."'";
+ 
+ if($rs=$conn->query($sql))
+    {
+        echo '<script>alert("Success")</script>';
+        
+    }
+                            }
+         } 
+
+    }}else{
+
+     echo '<script>alert(" Password Mismatched")</script>';
+   
+                
+    }
+}
+
+//END
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
