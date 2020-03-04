@@ -1,3 +1,56 @@
+<?php
+include('conn.php');
+$err_msg ="";
+
+
+if(isset($_POST['signin']))
+{
+  $name = $_POST['your_name'];
+  $pass = $_POST['your_pass'];
+  $pass = md5($pass);
+  
+ 
+  $check = "SELECT * FROM signup Where username='$name' ";
+    if($rs=$conn->query($check)){
+      if($rs->num_rows<1){
+                echo '<script>alert("Username doesnt  exist")</script>';
+             
+
+                          }
+                                
+    else
+        {
+            if($row=$rs->fetch_assoc())
+            {
+              $dbpass=$row['password'];
+
+              if( $dbpass ==$pass)
+              {
+                
+                echo '<script>alert("Log in successfully")</script>';
+               // header("Location:index.php");
+
+              
+              }
+              else
+              {
+                echo '<script>alert("Password Mismatched")</script>';
+              
+                
+
+
+                   
+              }
+              
+            }
+        }
+                        }
+}
+
+//END
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +84,13 @@ a:active {
    
 <body>
 
-    <div class="main" style="background-color: #808080">
+    <div class="main" style="background-color: #F99923">
 
     
 
         <!-- Sing in  Form -->
         <section class="sign-in">
-            <div class="container">
+            <div class="container" style="background-color: #C4D3C4"    >
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/key.png" alt="sing up image"></figure>
@@ -60,7 +113,7 @@ a:active {
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" style="background-color: #06880A"/>
                             </div>
                         </form>
                      

@@ -91,11 +91,11 @@ a:active {
 </head>
 <body>
 
-    <div class="main" style="background-color: #808080">
+    <div class="main" style="background-color: #F99923">
 
         <!-- Sign up form -->
         <section class="signup">
-            <div class="container">
+            <div class="container" style="background-color: #C4D3C4">
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
@@ -121,7 +121,7 @@ a:active {
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" style="background-color: #06880A" />
                             </div>
                         </form>
                     </div>
