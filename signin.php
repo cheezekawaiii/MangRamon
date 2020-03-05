@@ -73,7 +73,7 @@ a:visited {
 }
 
 a:hover {
-  color: red;
+  color: orange;
 }
 
 a:active {
@@ -90,10 +90,10 @@ a:active {
 
         <!-- Sing in  Form -->
         <section class="sign-in">
-            <div class="container" style="background-color: #C4D3C4"    >
+            <div class="container" style="background-color: #DBCDCD"    >
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/key.png" alt="sing up image"></figure>
+                        <figure><img src="images/loginuser.png" alt="sing up image"></figure>
                         <a href="signup.php" class="signup-image-link">Create an account</a>
                     </div>
 
@@ -102,14 +102,14 @@ a:active {
                         <form method="POST" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Enter your Username"/>
+                                <input type="text" name="your_name" id="your_name" placeholder="Enter your Username" required/>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Enter your Password"/>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Enter your Password" required />
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" required="" />
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                             </div>
                             <div class="form-group form-button">
