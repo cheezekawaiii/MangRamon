@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2020 at 07:24 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Mar 03, 2020 at 07:16 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `dionysus`
 --
-CREATE DATABASE IF NOT EXISTS `dionysus` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `dionysus`;
 
 -- --------------------------------------------------------
 
@@ -34,7 +32,7 @@ CREATE TABLE `signup` (
   `user_id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -42,9 +40,7 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`user_id`, `username`, `email`, `password`) VALUES
-(4, 'RizzaHuerto', 'rizzaleahuerto@gmail.com', '4337fb150cbc24bd1842'),
-(10, 'ManuelaVila', 'vilaanamanuela27@gmail.com', '4337fb150cbc24bd1842'),
-(14, 'ccc', 'ccc@gmail.com', '4337fb150cbc24bd1842');
+(24, 'Tubolicious', 'laurenze97@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +60,7 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

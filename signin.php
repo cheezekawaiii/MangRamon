@@ -1,9 +1,27 @@
+<?php
+session_start();
+session_unset();
+session_destroy();
+if (isset($_COOKIE['name'])&&isset($_COOKIE['pass'])) {
+   $ckbox="checked";
+}else{
+   $ckbox="";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <p id="session" />
+    <script src="js/jq.js"></script>
+    <script src="js/jqc.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/main.js"></script>
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+        window.history.backward();
+    </script>
     <title>SIGN IN HERE</title>
 
     <!-- Font Icon -->
@@ -12,13 +30,8 @@
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <div class="main" style="background-color: #808080">
-
-    
-
-        <!-- Sing in  Form -->
+<body style="background-image: url('images/bg.jpg');margin:150px">
+       <!-- Sing in  Form -->
         <section class="sign-in">
             <div class="container">
                 <div class="signin-content">
@@ -29,33 +42,71 @@
 
                     <div class="signin-form">
                         <h2 class="form-title">LOG IN</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form id="loginform">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Enter your Username"/>
+                                <input type="text" name="name" id="name" placeholder="Enter your Username" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Enter your Password"/>
+                                <input type="password" name="pass" id="pass" placeholder="Enter your Password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <input type="checkbox" id="remember-me" class="agree-term"  <?php echo $ckbox ?> />
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                <a id="signin" class="form-submit">Log in</a>
                             </div>
                         </form>
-                     
+                    
                     </div>
                 </div>
             </div>
         </section>
 
-    </div>
-
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (Cookies){
+                $("#name").val(Cookies.get("name"));
+                $("#pass").val(Cookies.get("pass"));
+            }
+            $("#remember-me").change(function(){
+            if ($("#remember-me").prop("checked")){
+                var name =  $("#name").val();
+                var pass =  $("#pass").val();
+                Cookies.set('name',name,{expires:2});
+                Cookies.set('pass',pass,{expires:2});
+            }else{
+               Cookies.remove('name');
+               Cookies.remove('pass');
+               $("#name").val("");
+               $("#pass").val("");
+            }
+            });
+            $("#signin").on("click",function(){
+                    form =$('#loginform').serialize();
+                    $.ajax({
+                            url:'transactions/login.php',
+                            type:'POST',
+                            data: form,
+                            dataType:'json',
+                            success:function(result){
+                                if (result == "success") {
+                                    window.location.href = 'main.php';
+                                }else{
+                                    alert("User or Password Invalid");
+                                }
+                            },
+                            error:function(){
+                                console.log('error');
+                            }
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
