@@ -37,7 +37,9 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                             <source src="images/Basics of Oracle.mp4" type="video/mp4">
                         </video>
 			    <h1>Postgre</h1>
-                        <a href="https://www.youtube.com/watch?v=DPUk8g-hyRk&feature=youtu.be"><img src="images/postgre.png" style="width: 40%"></a>
+                        <video width="400" controls>
+                            <source src="images/PostGreSql.mp4" type="video/mp4">
+                        </video>
 			    <h1>sqlite</h1>
                         <a href="https://youtu.be/rUSzGyfQibU"><img src="images/sqlite.png" style="width: 40%"></a>
                     </div>                 
