@@ -25,6 +25,13 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                 	
                     <div align="center">
                     <div class="form-body">
+			    
+	<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+	<h1 style="background-color:#ff6347;">...</h1>
+	<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+	<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+			    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
 			    <h1>Oracle</h1>
                         <a href="https://www.youtube.com/watch?v=4YyDsjLJw1k&feature=youtu.be"><img src="images/oracle.png" style="width: 40%"></a>
 			    <h1>Postgre</h1>
