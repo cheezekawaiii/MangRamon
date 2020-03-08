@@ -67,7 +67,9 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                 	
                     <div align="center">
                     <div class="form-body">
-			    
+			    <div>
+			    	<h1> BSIT 4B Tutorial</h1>
+			    </div>
 	
 			<div class="box">
 			    <h1 style=>" O R A C L E "</h1>
