@@ -17,6 +17,48 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
+<style>
+
+.box{
+	background: black;
+	margin-bottom: 20px;
+	color: white; 
+	border-radius: 100px;
+	padding: 10px;
+}
+
+.box:hover{
+	box-shadow: 5px 5px 5px blue; 
+	padding: 20px;
+}
+
+.box1{
+	margin-bottom: 20px;
+	background: black; 
+	padding: 10px; 
+	color: white;  
+	border-radius: 100px;
+}
+
+.box1:hover{
+	box-shadow: 5px 5px 5px orange;
+	padding: 20px;
+}
+.box2{
+	margin-bottom: 20px;
+	background: black; 
+	padding: 10px; 
+	color: white; 
+	border-radius: 100px
+}
+
+.box2:hover{
+	box-shadow: 5px 5px 5px green;
+	padding: 20px;
+}
+</style>
+
+
 </head>
 <body style="background-image: url('images/bg.jpg');margin:150px" align="center">
 <section class="sign-in">
@@ -26,23 +68,21 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                     <div align="center">
                     <div class="form-body">
 			    
-	<h1 style="background-color:rgb(255, 99, 71);">...</h1>
-	<h1 style="background-color:#ff6347;">...</h1>
-	<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
-
-	<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
-			    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
-			    <h1>Oracle</h1>
-                         <video width="400" controls>
-                            <source src="images/Basics of Oracle.mp4" type="video/mp4">
-                        </video>
-			    <h1>Postgre</h1>
-                        <video width="400" controls>
-                            <source src="images/PostGreSql.mp4" type="video/mp4">
-                        </video>
-			    <h1>sqlite</h1>
+	
+			<div class="box">
+			    <h1 style=>" O R A C L E "</h1>
+                        <a href="https://www.youtube.com/watch?v=4YyDsjLJw1k&feature=youtu.be"><img src="images/oracle.png" style="width: 40%"></a>
+			</div>	
+			<div class="box1">				
+			    <h1>" P O S T G R E "</h1>
+                        <a href="https://www.youtube.com/watch?v=DPUk8g-hyRk&feature=youtu.be"><img src="images/postgre.png" style="width: 40%"></a>
+			</div>	
+			<div class="box2">	
+			    <h1>" S Q L I T E "</h1>
                         <a href="https://youtu.be/rUSzGyfQibU"><img src="images/sqlite.png" style="width: 40%"></a>
-                    </div>                 
+                   
+			</div>
+				    </div>                 
                     </div>
                 </div>
             <div class="form-footer" style="border-top: dotted;" align="right">
