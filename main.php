@@ -20,11 +20,11 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 <style>
 
 .box{
-	background: black;
-	margin-bottom: 20px;
-	color: white; 
-	border-radius: 100px;
-	padding: 10px;
+	background: white;
+	margin-bottom: 30px;
+	color: black; 
+	border-radius: 110px;
+	padding: 20px;
 }
 
 .box:hover{
