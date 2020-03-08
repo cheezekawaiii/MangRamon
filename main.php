@@ -25,7 +25,6 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                 	
                     <div align="center">
                     <div class="form-body">
-			    Francis
                         <a href="https://www.youtube.com/watch?v=4YyDsjLJw1k&feature=youtu.be"><img src="images/oracle.png" style="width: 40%"></a>
                         <a href="https://www.youtube.com/watch?v=DPUk8g-hyRk&feature=youtu.be"><img src="images/postgre.png" style="width: 40%"></a>
                         <a href="https://youtu.be/rUSzGyfQibU"><img src="images/sqlite.png" style="width: 40%"></a>
