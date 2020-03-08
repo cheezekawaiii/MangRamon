@@ -82,7 +82,7 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 			<div class="box2">	
 			    <h1>" S Q L I T E "</h1>
                         <video width="400" controls>
-                          <source src="images/SQLite.mp4" type="video/mp4">
+                          <source src="images/SQLites.mp4" type="video/mp4">
                         </video>
                    
 			</div>
