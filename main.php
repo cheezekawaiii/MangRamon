@@ -86,7 +86,89 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                     </div>
                 </div>
             <div class="form-footer" style="border-top: dotted;" align="right">
-                    	<button id="btn" class="form-submit" style="margin: 20px">Log out</button>
+                    	 <button id="myBtn" style="background-color: #008CBA;; padding: 15px 32px; " >Logout</button>
+
+                       
+                        <div id="myModal" class="modal">
+
+                         
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <center>
+                            <p>Are you sure?</p>
+                            <button id="btn" class="form-submit" style="margin: 20px">CONFIRM</button>
+                            </center>
+                          </div>
+
+                        </div>
+                        <style type="text/css">
+                            
+ 
+
+                        .modal {
+                          display: none; 
+                          position: fixed; 
+                          z-index: 1; 
+                          left: 0;
+                          top: 0;
+                          width: 100%; 
+                          height: 100%; 
+                          overflow: auto; 
+                          background-color: rgb(0,0,0); 
+                          background-color: rgba(0,0,0,0.4); 
+                        }
+
+                       
+                        .modal-content {
+                          background-color: #fefefe;
+                          margin: 15% auto; 
+                          padding: 20px;
+                          border: 1px solid #888;
+                          width: 80%; 
+                        }
+
+                        
+                        .close {
+                          color: #aaa;
+                          float: right;
+                          font-size: 28px;
+                          font-weight: bold;
+                        }
+
+                        .close:hover,
+                        .close:focus {
+                          color: black;
+                          text-decoration: none;
+                          cursor: pointer;
+                        }
+                                                </style>
+                        <script>
+                       
+                        var modal = document.getElementById("myModal");
+
+                      
+                        var btn = document.getElementById("myBtn");
+
+                        
+                        var span = document.getElementsByClassName("close")[0];
+
+                       
+                        btn.onclick = function() {
+                          modal.style.display = "block";
+                        }
+
+                       
+                        span.onclick = function() {
+                          modal.style.display = "none";
+                        }
+
+                        
+                        window.onclick = function(event) {
+                          if (event.target == modal) {
+                            modal.style.display = "none";
+                          }
+                        }
+                        </script>
             </div> 
             </div>
         </section>
