@@ -33,7 +33,9 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 	<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
 			    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
 			    <h1>Oracle</h1>
-                        <a href="https://www.youtube.com/watch?v=4YyDsjLJw1k&feature=youtu.be"><img src="images/oracle.png" style="width: 40%"></a>
+                         <video width="400" controls>
+                            <source src="images/Basics of Oracle.mp4" type="video/mp4">
+                        </video>
 			    <h1>Postgre</h1>
                         <a href="https://www.youtube.com/watch?v=DPUk8g-hyRk&feature=youtu.be"><img src="images/postgre.png" style="width: 40%"></a>
 			    <h1>sqlite</h1>
