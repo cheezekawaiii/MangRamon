@@ -22,7 +22,7 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 .box{
 	 background-color: #686868;
 	margin-bottom: 30px;
-	color: black; 
+	color: white; 
 	border-radius: 110px;
 	padding: 20px;
   width: 600px;
@@ -53,14 +53,14 @@ margin-left: 150px;
 	margin-bottom: 20px;
 margin-left: 150px;
 	padding: 10px; 
-	color: white; 
+	color: green; 
 	border-radius: 100px
 
 }
 
 .box2:hover{
-	box-shadow: 5px 5px 5px green;
-	padding: 20px;
+	box-shadow: 5px 5px 5px red;
+	padding: 30px;
 }
 </style>
 
@@ -79,7 +79,7 @@ margin-left: 150px;
 	
 			<div class="box1">
 			    <h1 style="">" O R A C L E "</h1>
-                        <video width="400" controls=""><source src="images/Basics of Oracle.mp4" type="video/mp4">
+                        <video width="450" controls=""><source src="images/Basics of Oracle.mp4" type="video/mp4">
                         </video>
 			</div>	
 			<div class="box1">			
