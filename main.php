@@ -20,11 +20,13 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 <style>
 
 .box{
-	background: white;
+	 background-color: #686868;
 	margin-bottom: 30px;
 	color: black; 
 	border-radius: 110px;
 	padding: 20px;
+  width: 600px;
+
 }
 
 .box:hover{
@@ -33,11 +35,13 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 }
 
 .box1{
+   background-color: #686868;
 	margin-bottom: 20px;
-	background: black; 
+margin-left: 150px;
 	padding: 10px; 
 	color: white;  
 	border-radius: 100px;
+  width: 600px;
 }
 
 .box1:hover{
@@ -45,11 +49,13 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 	padding: 20px;
 }
 .box2{
+ background-color: #686868;
 	margin-bottom: 20px;
-	background: black; 
+margin-left: 150px;
 	padding: 10px; 
 	color: white; 
 	border-radius: 100px
+
 }
 
 .box2:hover{
@@ -68,16 +74,16 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
                     <div align="center">
                     <div class="form-body">
 			    <div>
-			    	<h1> BSIT 4B Tutorial</h1>
+			    	<h1 style="text-align: center;"> BSIT 4B Tutorial</h1>
 			    </div>
 	
 			<div class="box1">
-			    <h1 style=>" O R A C L E "</h1>
-                        <video width="600" controls><source src="images/Basics of Oracle.mp4" type="video/mp4">
+			    <h1 style="">" O R A C L E "</h1>
+                        <video width="400" controls=""><source src="images/Basics of Oracle.mp4" type="video/mp4">
                         </video>
 			</div>	
-			<div class="box1">				
-			    <h1>" P O S T G R E "</h1>
+			<div class="box1">			
+ 			    <h1>" P O S T G R E "</h1>
                         <video width="400" controls><source src="images/PostGreSql.mp4" type="video/mp4">
                         </video>
 			</div>	
