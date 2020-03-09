@@ -73,11 +73,13 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 	
 			<div class="box">
 			    <h1 style=>" O R A C L E "</h1>
-                        <a href="https://www.youtube.com/watch?v=4YyDsjLJw1k&feature=youtu.be"><img src="images/oracle.png" style="width: 40%"></a>
+                        <video width="400" controls=""><source src="images/Basics ofO racle.mp4" type="video/mp4">
+                        </video>
 			</div>	
 			<div class="box1">				
 			    <h1>" P O S T G R E "</h1>
-                        <a href="https://www.youtube.com/watch?v=DPUk8g-hyRk&feature=youtu.be"><img src="images/postgre.png" style="width: 40%"></a>
+                        <video width="400" controls=""><source src="images/PostGreSql.mp4" type="video/mp4">
+                        </video>
 			</div>	
 			<div class="box2">	
 			    <h1>" S Q L I T E "</h1>
