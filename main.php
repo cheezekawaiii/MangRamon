@@ -71,14 +71,14 @@ if(isset($_SESSION["user"])&&isset($_SESSION["pass"])){
 			    	<h1> BSIT 4B Tutorial</h1>
 			    </div>
 	
-			<div class="box">
+			<div class="box1">
 			    <h1 style=>" O R A C L E "</h1>
-                        <video width="400" controls=""><source src="images/Basics of Oracle.mp4" type="video/mp4">
+                        <video width="400" controls><source src="images/Basics of Oracle.mp4" type="video/mp4">
                         </video>
 			</div>	
 			<div class="box1">				
 			    <h1>" P O S T G R E "</h1>
-                        <video width="400" controls=""><source src="images/PostGreSql.mp4" type="video/mp4">
+                        <video width="400" controls><source src="images/PostGreSql.mp4" type="video/mp4">
                         </video>
 			</div>	
 			<div class="box2">	
