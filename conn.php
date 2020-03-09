@@ -3,7 +3,7 @@
 $server="localhost";
 $dbusername="root";
 $dbpass="";
-$dbname="dionysu";
+$dbname="dionysus";
 date_default_timezone_set("Asia/Manila");
 
 //connection string

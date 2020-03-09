@@ -1,5 +1,5 @@
 <?php
-include('conn.php');
+include('../conn.php');
 // insert variables
 $name = $_POST['name'];
 $email = $_POST['email'];
